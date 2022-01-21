@@ -67,10 +67,18 @@ public class AppTest {
     assertEquals(10, teste.summe(value1, value2));
   }
   //hier ist es klar dass es eine exception wirft darum expected
+  //MAX
   @Test(expected = ArithmeticException.class)
-  public void testMinundMax02() {
+  public void testMax02() {
     int value1 = 10;
     int value2 = Integer.MAX_VALUE;
+    teste.summe(value1, value2);
+  }
+   //MIN
+  @Test
+  public void TestMinimum() {
+    int value1 = Integer.MIN_VALUE;
+    int value2 = 20;
     teste.summe(value1, value2);
   }
 
