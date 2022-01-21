@@ -59,22 +59,24 @@ public class AppTest {
     int value2 = 20;
     assertEquals(30, teste.summe(value1, value2));
   }
-  
+
   @Test
   public void testZahlmitNull() {
     int value1 = 10;
     int value2 = 0;
     assertEquals(10, teste.summe(value1, value2));
   }
-  //hier ist es klar dass es eine exception wirft darum expected
-  //MAX
+
+  // hier ist es klar dass es eine exception wirft darum expected
+  // MAX
   @Test(expected = ArithmeticException.class)
   public void testMax02() {
     int value1 = 10;
     int value2 = Integer.MAX_VALUE;
     teste.summe(value1, value2);
   }
-   //MIN
+
+  // MIN
   @Test
   public void TestMinimum() {
     int value1 = Integer.MIN_VALUE;
@@ -83,6 +85,13 @@ public class AppTest {
   }
 
   // 8 Aufgabe Substraktion
+  @Test
+  public void testZweiNegativeIstOk() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = -10;
+    int value2 = -20;
+    assertEquals(10, teste.subtraktion(value1, value2));
+  }
 
   // 8 Aufgabe Division
 
