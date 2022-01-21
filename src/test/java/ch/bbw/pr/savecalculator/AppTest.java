@@ -38,4 +38,11 @@ public void testZweiNegativeIstOk() {
     int value2 = 20;
     assertEquals(-10, teste.subtraktion(value1, value2));
 }
+@Test(expected=ArithmeticException.class)
+public void testIndexOutOfBoundsException() {
+  int value1 = Integer.MAX_VALUE;
+  int value2 = 20;
+  assertEquals(30, teste.summe(value1, value2));
+}
+
 }
