@@ -38,7 +38,7 @@ public class SaveCalculator {
   }
   
 }
-  public double multiplikation(int value1, int value2) {
+  public int multiplikation(int value1, int value2) {
     long value = (long) value1 * (long) value2;
     if ((value > Integer.MAX_VALUE) || (value < Integer.MIN_VALUE)){
        throw new ArithmeticException();

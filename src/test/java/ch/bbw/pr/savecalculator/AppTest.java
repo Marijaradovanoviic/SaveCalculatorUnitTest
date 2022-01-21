@@ -196,7 +196,61 @@ public class AppTest {
     int value2 = -5;
     assertEquals(-2, teste.division(value1, value2));
   }
-
+//Multiplikation
+@Test
+public void testMultiplikationZweiNegativeIstOk() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = 5;
+  int value2 = 5;
+  assertEquals(25, teste.multiplikation(value1, value2));
+}
+@Test
+public void testMultiplikationZweiNegativeIstOk02() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = 20;
+  int value2 = 5;
+  assertEquals(100, teste.multiplikation(value1, value2));
+}
+@Test
+public void testMultiplikationZweiPositiveIstOk() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = -2;
+  int value2 = -2;
+  assertEquals(4, teste.multiplikation(value1, value2));
+}
+@Test
+public void testMultiplikationZweiPositiveIstOk02() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = -10;
+  int value2 = -5;
+  assertEquals(50, teste.multiplikation(value1, value2));
+}
+@Test(expected = ArithmeticException.class)
+public void MultiplikationMax01() {
+  int value1 = 10;
+  int value2 = Integer.MAX_VALUE;
+  teste.multiplikation(value1, value2);
+}
+@Test(expected = ArithmeticException.class)
+public void MultiplikationMin01() {
+  int value1 = 10;
+  int value2 = Integer.MIN_VALUE;
+  teste.multiplikation(value1, value2);
+}
+@Test
+public void testMultiplikationZahlmitNull() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = 10;
+  int value2 = 0;
+  assertEquals(0, teste.multiplikation(value1, value2));
+}
+@Test
+public void testeMultiplikationeinePositiveundNegative01() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = 10;
+  int value2 = -5;
+  assertEquals(-50, teste.multiplikation(value1, value2));
+}
 
   // "Setter und Getter":
   // Most of the time, get/set methods just can't break, and if they can't break,
