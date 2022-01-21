@@ -26,10 +26,7 @@ public class SaveCalculator {
 	public double division(int value1, int value2) {
 		return value1 / value2;
 	}
-	private double multiplication(Integer value1, Integer value2) {
+  public double multiplikation(int value1, int value2) {
 		return value1 * value2;
 	}
-	//pow
-	//sqrt
-	//...
 }
