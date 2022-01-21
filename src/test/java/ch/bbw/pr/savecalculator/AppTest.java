@@ -125,6 +125,13 @@ public class AppTest {
     int value2 = Integer.MIN_VALUE;
     teste.subtraktion(value1, value2);
   }
+  @Test
+  public void testSubtraktionZahlmitNull() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 0;
+    assertEquals(10, teste.subtraktion(value1, value2));
+  }
 
   // 8 Aufgabe Division
 
