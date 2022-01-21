@@ -66,6 +66,13 @@ public class AppTest {
     int value2 = 0;
     assertEquals(10, teste.summe(value1, value2));
   }
+  //hier ist es klar dass es eine exception wirft darum expected
+  @Test(expected = ArithmeticException.class)
+  public void testMinundMax02() {
+    int value1 = 10;
+    int value2 = Integer.MAX_VALUE;
+    teste.summe(value1, value2);
+  }
 
   // 8 Aufgabe Substraktion
 
