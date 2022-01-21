@@ -45,4 +45,14 @@ public void testIndexOutOfBoundsException() {
   assertEquals(30, teste.summe(value1, value2));
 }
 
+// gib die unexpected exception
+// @Test 
+// public void testunexpected() {
+//   int value1 = Integer.MAX_VALUE;
+//   int value2 = 20;
+//   assertEquals(30, teste.summe(value1, value2));
+// }
+
+
+
 }
