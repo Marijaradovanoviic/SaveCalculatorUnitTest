@@ -45,6 +45,12 @@ public void testIndexOutOfBoundsException() {
   assertEquals(30, teste.summe(value1, value2));
 }
 
+//"Setter und Getter":
+//Most of the time, get/set methods just can't break, and if they can't break, then why test them? While it is usually better to test more, there 
+//is a definite curve of diminishing returns on test effort versus "code coverage". Remember the maxim: "Test until fear turns to boredom."
+//Setter und Getter sind nicht nötig
+
+
 // gib die unexpected exception
 // @Test 
 // public void testunexpected() {
