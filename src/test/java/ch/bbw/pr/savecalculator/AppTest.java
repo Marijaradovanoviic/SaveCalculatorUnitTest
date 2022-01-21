@@ -9,101 +9,108 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    private SaveCalculator teste;
-@Before
-public void createSavCalculatorTeste() {
-    teste = new SaveCalculator();
-}
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+public class AppTest {
+  /**
+   * Rigorous Test :-)
+   */
+  private SaveCalculator teste;
 
-    //8 Aufgaben Summe 
-    @Test
-    public void testZweiPositiveIsOk01() {
-        int value1 = 10;
-        int value2 = 20;
-        assertEquals(30, teste.summe(value1, value2));
-    }
-    @Test
-public void testZweiPositiveIsOk02() {
+  @Before
+  public void createSavCalculatorTeste() {
+    teste = new SaveCalculator();
+  }
+
+  @Test
+  public void shouldAnswerWithTrue() {
+    assertTrue(true);
+  }
+
+  // 8 Aufgaben Summe
+  @Test
+  public void testZweiPositiveIsOk01() {
+    int value1 = 10;
+    int value2 = 20;
+    assertEquals(30, teste.summe(value1, value2));
+  }
+
+  @Test
+  public void testZweiPositiveIsOk02() {
     int value1 = 20;
     int value2 = 20;
     assertEquals(40, teste.summe(value1, value2));
-}
-public void testZweiNegativeIsOk02() {
-  int value1 = -10;
-  int value2 = -10;
-  assertEquals(-20, teste.summe(value1, value2));
-}
-@Test
-public void testZweiNegativeIsOk01() {
-  int value1 = -10;
-  int value2 = -20;
-  assertEquals(-30, teste.summe(value1, value2));
-}
+  }
 
+  public void testZweiNegativeIsOk02() {
+    int value1 = -10;
+    int value2 = -10;
+    assertEquals(-20, teste.summe(value1, value2));
+  }
 
-    
+  @Test
+  public void testZweiNegativeIsOk01() {
+    int value1 = -10;
+    int value2 = -20;
+    assertEquals(-30, teste.summe(value1, value2));
+  }
 
-//8 Aufgabe Substraktion
+  @Test(expected = ArithmeticException.class)
+  public void testIndexOutOfBoundsException() {
+    int value1 = Integer.MAX_VALUE;
+    int value2 = 20;
+    assertEquals(30, teste.summe(value1, value2));
+  }
 
-//8 Aufgabe Division 
+  // 8 Aufgabe Substraktion
 
-//"Setter und Getter":
-//Most of the time, get/set methods just can't break, and if they can't break, then why test them? While it is usually better to test more, there 
-//is a definite curve of diminishing returns on test effort versus "code coverage". Remember the maxim: "Test until fear turns to boredom."
-//Setter und Getter sind nicht nötig
+  // 8 Aufgabe Division
 
+  // "Setter und Getter":
+  // Most of the time, get/set methods just can't break, and if they can't break,
+  // then why test them? While it is usually better to test more, there
+  // is a definite curve of diminishing returns on test effort versus "code
+  // coverage". Remember the maxim: "Test until fear turns to boredom."
+  // Setter und Getter sind nicht nötig
 
-// gib die unexpected exception
-// @Test 
-// public void testunexpected() {
-//   int value1 = Integer.MAX_VALUE;
-//   int value2 = 20;
-//   assertEquals(30, teste.summe(value1, value2));
-// }
+  // gib die unexpected exception
+  // @Test
+  // public void testunexpected() {
+  // int value1 = Integer.MAX_VALUE;
+  // int value2 = 20;
+  // assertEquals(30, teste.summe(value1, value2));
+  // }
 
-//Aufgabe Sichbarkeit 
-//private methode, kannst dich aufrrufen 
-// @Test
-// public void TestPrivate() {
-//     SaveCalculator teste = new SaveCalculator();
-//     int value1 = 10;
-//     int value2 = 20;
-//     assertEquals(-10, teste.multiplikationprivate(value1, value2));
-// }
-//protected method, geht 
-// @Test
-//  public void TestProtected() {
-//     SaveCalculator teste = new SaveCalculator();
-//     int value1 = 10;
-//     int value2 = 20;
-//     assertEquals(-10, teste.multiplikationprivateprotected(value1, value2));
-// } 
-//public method
-@Test
-public void TestPublic01() {
+  // Aufgabe Sichbarkeit
+  // private methode geht nicht weil man sie nicht aufrufen kann.
+  // @Test
+  // public void TestPrivate() {
+  // SaveCalculator teste = new SaveCalculator();
+  // int value1 = 10;
+  // int value2 = 20;
+  // assertEquals(-10, teste.multiplikationprivate(value1, value2));
+  // }
+  // protected method, geht
+  // @Test
+  // public void TestProtected() {
+  // SaveCalculator teste = new SaveCalculator();
+  // int value1 = 10;
+  // int value2 = 20;
+  // assertEquals(-10, teste.multiplikationprivateprotected(value1, value2));
+  // }
+  // public method
+  @Test
+  public void TestPublic01() {
     SaveCalculator teste = new SaveCalculator();
     int value1 = 10;
     int value2 = 20;
     assertEquals(-10, teste.subtraktion02(value1, value2));
-}
-@Test
-public void TestPackageProtected() {
+  }
+
+  @Test
+  public void TestPackageProtected() {
     SaveCalculator teste = new SaveCalculator();
     int value1 = 10;
     int value2 = 20;
     assertEquals(-10, teste.subtraktion03(value1, value2));
-}
-
-
+  }
 
 }
