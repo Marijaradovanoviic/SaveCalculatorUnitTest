@@ -119,6 +119,12 @@ public class AppTest {
     int value2 = Integer.MAX_VALUE;
     teste.subtraktion(value1, value2);
   }
+  @Test(expected = ArithmeticException.class)
+  public void SubstraktionMin01() {
+    int value1 = 10;
+    int value2 = Integer.MIN_VALUE;
+    teste.subtraktion(value1, value2);
+  }
 
   // 8 Aufgabe Division
 
