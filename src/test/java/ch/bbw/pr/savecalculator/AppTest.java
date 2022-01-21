@@ -24,26 +24,13 @@ public void createSavCalculatorTeste() {
     {
         assertTrue( true );
     }
-    @Test
-public void testZweiPositiveIsOk() {
-    int value1 = 10;
-    int value2 = 20;
-    assertEquals(30, teste.summe(value1, value2));
-}
 
-@Test
-public void testZweiNegativeIstOk() {
-    SaveCalculator teste = new SaveCalculator();
-    int value1 = 10;
-    int value2 = 20;
-    assertEquals(-10, teste.subtraktion(value1, value2));
-}
-@Test(expected=ArithmeticException.class)
-public void testIndexOutOfBoundsException() {
-  int value1 = Integer.MAX_VALUE;
-  int value2 = 20;
-  assertEquals(30, teste.summe(value1, value2));
-}
+    //8 Aufgaben Summe 
+ 
+
+//8 Aufgabe Substraktion
+
+//8 Aufgabe Division 
 
 //"Setter und Getter":
 //Most of the time, get/set methods just can't break, and if they can't break, then why test them? While it is usually better to test more, there 
@@ -60,6 +47,7 @@ public void testIndexOutOfBoundsException() {
 // }
 
 //Aufgabe Sichbarkeit 
+//private methode, kannst dich aufrrufen 
 // @Test
 // public void TestPrivate() {
 //     SaveCalculator teste = new SaveCalculator();
@@ -67,12 +55,30 @@ public void testIndexOutOfBoundsException() {
 //     int value2 = 20;
 //     assertEquals(-10, teste.multiplikationprivate(value1, value2));
 // }
-
+//protected method, geht 
 // @Test
-// public void TestProtected() {
+//  public void TestProtected() {
 //     SaveCalculator teste = new SaveCalculator();
 //     int value1 = 10;
 //     int value2 = 20;
 //     assertEquals(-10, teste.multiplikationprivateprotected(value1, value2));
-// }
+// } 
+//public method
+@Test
+public void TestPublic01() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 20;
+    assertEquals(-10, teste.subtraktion02(value1, value2));
+}
+@Test
+public void TestPackageProtected() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 20;
+    assertEquals(-10, teste.subtraktion03(value1, value2));
+}
+
+
+
 }
