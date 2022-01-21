@@ -43,6 +43,12 @@ public void testZweiNegativeIsOk02() {
   int value2 = -10;
   assertEquals(-20, teste.summe(value1, value2));
 }
+@Test
+public void testZweiNegativeIsOk01() {
+  int value1 = -10;
+  int value2 = -20;
+  assertEquals(-30, teste.summe(value1, value2));
+}
 
 
     
