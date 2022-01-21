@@ -142,6 +142,62 @@ public class AppTest {
 
   // 8 Aufgabe Division
 
+  @Test
+  public void testDivisionZweiNegativeIstOk() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = -30;
+    int value2 = -15;
+    assertEquals(2, teste.division(value1, value2));
+  }
+  @Test
+  public void testDivisionZweiNegativeIstOk02() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = -20;
+    int value2 = -5;
+    assertEquals(4, teste.division(value1, value2));
+  }
+  @Test
+  public void testDivisionZweiPositiveIstOk() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 44;
+    int value2 = 4;
+    assertEquals(11, teste.division(value1, value2));
+  }
+  @Test
+  public void testDivisionZweiPositiveIstOk02() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 5;
+    assertEquals(2, teste.division(value1, value2));
+  }
+  @Test
+  public void DivisionMax01() {
+    int value1 = 10;
+    int value2 = Integer.MAX_VALUE;
+    teste.division(value1, value2);
+  }
+  @Test
+  public void DivisionMin01() {
+    int value1 = 10;
+    int value2 = Integer.MIN_VALUE;
+    teste.division(value1, value2);
+  }
+  @Test(expected = ArithmeticException.class)
+  public void testDivisionZahlmitNull() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 0;
+    assertEquals(10, teste.division(value1, value2));
+  }
+  @Test
+  public void testeDivivioneinePositiveundNegative01() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = -5;
+    assertEquals(-2, teste.division(value1, value2));
+  }
+
+
   // "Setter und Getter":
   // Most of the time, get/set methods just can't break, and if they can't break,
   // then why test them? While it is usually better to test more, there
