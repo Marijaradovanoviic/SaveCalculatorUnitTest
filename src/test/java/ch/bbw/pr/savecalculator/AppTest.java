@@ -26,7 +26,13 @@ public void createSavCalculatorTeste() {
     }
 
     //8 Aufgaben Summe 
- 
+    @Test
+    public void testZweiPositiveIsOk01() {
+        int value1 = 10;
+        int value2 = 20;
+        assertEquals(30, teste.summe(value1, value2));
+    }
+    
 
 //8 Aufgabe Substraktion
 
