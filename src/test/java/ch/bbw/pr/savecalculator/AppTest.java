@@ -59,6 +59,13 @@ public class AppTest {
     int value2 = 20;
     assertEquals(30, teste.summe(value1, value2));
   }
+  
+  @Test
+  public void testZahlmitNull() {
+    int value1 = 10;
+    int value2 = 0;
+    assertEquals(10, teste.summe(value1, value2));
+  }
 
   // 8 Aufgabe Substraktion
 
