@@ -132,6 +132,13 @@ public class AppTest {
     int value2 = 0;
     assertEquals(10, teste.subtraktion(value1, value2));
   }
+  @Test
+  public void testeeinePositiveundNegative01() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = -5;
+    assertEquals(15, teste.subtraktion(value1, value2));
+  }
 
   // 8 Aufgabe Division
 
