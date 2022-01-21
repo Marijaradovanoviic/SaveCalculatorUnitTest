@@ -29,4 +29,11 @@ public class SaveCalculator {
   public double multiplikation(int value1, int value2) {
 		return value1 * value2;
 	}
+
+  private double multiplikationprivate(int value1, int value2) {
+		return value1 * value2;
+	}
+  protected double multiplikationprivateprotected(int value1, int value2) {
+		return value1 * value2;
+	}
 }

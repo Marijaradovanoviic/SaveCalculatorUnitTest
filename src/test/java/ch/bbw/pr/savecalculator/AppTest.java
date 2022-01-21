@@ -59,6 +59,20 @@ public void testIndexOutOfBoundsException() {
 //   assertEquals(30, teste.summe(value1, value2));
 // }
 
+//Aufgabe Sichbarkeit 
+// @Test
+// public void TestPrivate() {
+//     SaveCalculator teste = new SaveCalculator();
+//     int value1 = 10;
+//     int value2 = 20;
+//     assertEquals(-10, teste.multiplikationprivate(value1, value2));
+// }
 
-
+// @Test
+// public void TestProtected() {
+//     SaveCalculator teste = new SaveCalculator();
+//     int value1 = 10;
+//     int value2 = 20;
+//     assertEquals(-10, teste.multiplikationprivateprotected(value1, value2));
+// }
 }
