@@ -106,6 +106,13 @@ public class AppTest {
     int value2 = 6;
     assertEquals(-1, teste.subtraktion(value1, value2));
   }
+  @Test
+  public void testZweiPositiveIstOk02() {
+    SaveCalculator teste = new SaveCalculator();
+    int value1 = 10;
+    int value2 = 5;
+    assertEquals(5, teste.subtraktion(value1, value2));
+  }
 
 
   // 8 Aufgabe Division
