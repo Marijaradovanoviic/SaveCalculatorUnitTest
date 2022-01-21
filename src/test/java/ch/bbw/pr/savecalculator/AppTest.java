@@ -276,29 +276,34 @@ public void testeMultiplikationeinePositiveundNegative01() {
   // int value2 = 20;
   // assertEquals(-10, teste.multiplikationprivate(value1, value2));
   // }
-  // protected method, geht
-  // @Test
-  // public void TestProtected() {
-  // SaveCalculator teste = new SaveCalculator();
-  // int value1 = 10;
-  // int value2 = 20;
-  // assertEquals(-10, teste.multiplikationprivateprotected(value1, value2));
-  // }
-  // public method
+  // protected method, geht. Die unterschiedlichen Stufen regeln die Sichtbarkeit von Membern einer Klasse (Instanzvariablen und Methoden).Sie legen fest, in welchem Maß Code außerhalb der Klasse darauf zugreifen kann.
+  //Die Zugriffsstufe protected erlaubt also den Zugriff auf Instanzvariablen und Methoden für die eigene Klasse, für Klassen im selben package und darüber hinaus in vererbten Klassen, auch wenn sie in einem 
+  //anderem package sind:
+  @Test
+  public void Protected() {
+  SaveCalculator teste = new SaveCalculator();
+  int value1 = 1;
+  int value2 = 2;
+  assertEquals(2, teste.Protected(value1, value2));
+  }
+  // public method geht, überall zugreifbar
   @Test
   public void TestPublic01() {
     SaveCalculator teste = new SaveCalculator();
     int value1 = 10;
     int value2 = 20;
-    assertEquals(-10, teste.subtraktion02(value1, value2));
+    assertEquals(-10, teste.subtraktion(value1, value2));
   }
-
+  //Package Protected Methode geht. Die unterschiedlichen Stufen regeln die 
+  //Sichtbarkeit von Membern einer Klasse (Instanzvariablen und Methoden). Sie legen fest, in welchem Maß Code außerhalb der Klasse darauf zugreifen kann.
+  //Die Zugriffsstufe protected erlaubt also den Zugriff auf Instanzvariablen und Methoden für die eigene Klasse, für Klassen im selben package und darüber 
+  //hinaus in vererbten Klassen, auch wenn sie in einem anderem package sind:
   @Test
   public void TestPackageProtected() {
     SaveCalculator teste = new SaveCalculator();
     int value1 = 10;
     int value2 = 20;
-    assertEquals(-10, teste.subtraktion03(value1, value2));
+    assertEquals(-10, teste.PackageProtected(value1, value2));
   }
 
 }

@@ -50,14 +50,13 @@ public class SaveCalculator {
   // private double multiplikationprivate(int value1, int value2) {
 	// 	return value1 * value2;
 	// }
-  protected double multiplikationprivateprotected(int value1, int value2) {
+
+  //Method protected 
+  protected int Protected(int value1, int value2) {
 		return value1 * value2;
 	}
-  public int subtraktion02(int value1, int value2)
-	{
-		return value1 - value2;
-	}
-  int subtraktion03(int value1, int value2)
+  //Method PackageProtected
+  int PackageProtected(int value1, int value2)
 	{
 		return value1 - value2;
 	}
