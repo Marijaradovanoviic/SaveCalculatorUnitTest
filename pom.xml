@@ -48,7 +48,7 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <mainClass>ch.bbw.km.savecalculator.App</mainClass>
+                <mainClass>ch.bbw.pr.savecalculator.App</mainClass>
               </manifest>
             </archive>
           </configuration>
