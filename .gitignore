@@ -1,2 +1,5 @@
 target/
 SaveCalculatorUnitTest/
+/.idea
+*.iml
+*.xml
